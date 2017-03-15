@@ -1,0 +1,6 @@
+<form>
+  <md-select placeholder="Select Technology" [(ngModel)]="name" name="Technology" flex="50" class="md-select-value" #device (change)="onChange(name)">
+  <md-option *ngFor="let n of subDomainData" [value]="n">{{n}} </md-option>
+ </md-select>
+ <p> Selected value: {{name}} </p>
+</form>

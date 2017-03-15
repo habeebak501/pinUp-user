@@ -1,0 +1,85 @@
+<nav class="navbar navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="app/images/pinup.png">
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><h3 style="color:#00FFFF">PinUp</h3></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a routerLink="/register" style="color:#00FFFF"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+      <li><a routerLink="/logIn" style="color:#00FFFF"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div id="custom-search-input">
+    <div class="input-group col-md-12">
+      <input type="text" class="  search-query form-control" placeholder="Search" />
+      <span class="input-group-btn">
+      <button class="btn btn-danger" type="button">
+      <span class=" glyphicon glyphicon-search"></span>
+      </button>
+      </span>
+    </div>
+</div>
+</div>
+<!--
+<span class="text-1">Recently added</span>
+<div class="col-sm-12"><hr></div> -->
+<!-- <div class="cardData">
+<div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group">
+<div class="card">
+ </div>
+ </div>
+     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group ">
+       <div class="card">
+ </div>
+     </div>
+     <div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group">
+       <div class="card">
+   </div>
+     </div>
+     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group">
+       <div class="card">
+       </div>
+     </div>
+   </div> -->
+  <a (click)="viewAll()"><span class="text-2">ViewAll</span></a>
+  <a (click)="clearAll()"><span class="text-2">Back</span></a>
+   <div class="relatedCard" *ngIf="edited==true">
+    <span class="text-1">Related</span>
+     <!-- <div class="col-sm-12"><hr></div> -->
+    <div class="cardData">
+    <div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group" *ngFor="let item of pagedItems">
+    <div class="card" >
+      <a><p>{{item.name}}</p></a>
+     </div>
+     </div>
+</div>
+<hr>
+<!-- <ul class="pagination">
+               <li [ngClass]="{disabled:pager.currentPage === 1}">
+                   <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+               </li>
+               <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+                   <a (click)="setPage(page)">{{page}}</a>
+               </li>
+               <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                   <a (click)="setPage(pager.currentPage + 1)">Next</a>
+               </li>
+            </ul> -->
+           <hr>
+         </div>
+         <div class="relatedCard" *ngIf="edited==false">
+          <span class="text-1">Related</span>
+           <!-- <div class="col-sm-12"><hr></div> -->
+          <div class="cardData">
+          <div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group" *ngFor="let item of allItems">
+          <div class="card" >
+            <p>{{item.name}}</p>
+           </div>
+           </div>
+      </div>
+      <hr>
+    </div>

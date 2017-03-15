@@ -1,0 +1,22 @@
+
+  <!-- <simple-notifications options="options"></simple-notifications> -->
+
+<div class="loginmodal-container">
+  <h1>User Registration</h1><br>
+  <form #f="ngForm" class="form-horizontal" novalidate (ngSubmit)="onRegister(f.value)">
+    <input type="text" name="username" placeholder="Name" class="form-control" [ngModel]="user.username" required minlength="5" maxlength="32" #username="ngModel">
+
+    <input type="email" name="emailAddress" placeholder="Email" class="form-control" [ngModel]="user.emailAddress" required #emailAddress="ngModel" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+    <button type="submit" class="btn btn-info btn-lg " [disabled]="!f.valid"><span class="glyphicon glyphicon-send"></span> Register</button>
+    <div class="err">
+      <small [hidden]="username.valid || (username.pristine && !f.submitted)" class="text-danger">
+      Username is required (minimum 5 characters).
+    </small>
+      <small [hidden]="emailAddress.valid || (emailAddress.pristine && !f.submitted)" class="text-danger">
+    Email is required and format should be <i>john@doe.com</i>.
+    </small>
+    </div>
+  </form>
+</div>
+<simple-notifications [options]="options"></simple-notifications>
+<!-- <button (click)="Onlick()">Onlick</button> -->

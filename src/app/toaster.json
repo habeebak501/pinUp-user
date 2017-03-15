@@ -1,0 +1,38 @@
+{
+  "register": [
+    {
+      "type": "success",
+      "title": "success",
+      "message": "congrts"
+    },
+    {
+      "type": "error",
+      "title": "error",
+      "message": "fail"
+    }
+  ],
+  "login": [
+    {
+      "type": "success",
+      "title": "success",
+      "message": "congrts"
+    },
+    {
+      "type": "error",
+      "title": "error",
+      "message": "fail"
+    }
+  ],
+  "subdomain": [
+    {
+      "type": "success",
+      "title": "success",
+      "message": "congrts"
+    },
+    {
+      "type": "error",
+      "title": "error",
+      "message": "fail"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+ <div class="loginmodal-container">
+           <h1>User Login</h1><br>
+             <form #f="ngForm" class="form-horizontal" novalidate (ngSubmit)="onLogin(f.value)">
+               <input type="email" name="emailAddress" placeholder="Email" class="form-control" [ngModel]="user.emailAddress" required  #emailAddress="ngModel" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$">
+               <small [hidden]="emailAddress.valid || (emailAddress.pristine && !f.submitted)" class="text-danger">
+                 Email is required and format should be <i>john@doe.com</i>.
+               </small>
+             <button type="submit" class="btn btn-success btn-lg" [disabled]="!f.valid"><span class='glyphicon glyphicon-lock'></span>Login</button>
+           </form>
+         </div>

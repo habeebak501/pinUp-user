@@ -1,0 +1,102 @@
+#custom-search-input {
+        margin:0;
+        margin-top:10%;
+        padding: 0;
+        padding-left:20%;
+        width:70%;
+    }
+
+    #custom-search-input .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+    #custom-search-input button {
+        border: 0;
+        background: none;
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left:-28px;
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color:#00FFFF;
+    }
+
+    .search-query:focus + button {
+        z-index: 3;
+    }
+
+ .text-1{
+   color:#00FFFF;
+ }
+ .text-2{
+   color:#00FFFF;
+   margin-left: 90%;
+ }
+
+ .card{
+   width: 219px;
+height: 160px;
+border-radius: 3px;
+opacity: 1;
+text-align: center;
+background-color: #D8D8D8;
+box-shadow: 1 1 2 0 rgba(0, 0, 0, 50%);
+ }
+
+ /*.row{
+   margin-top: 30px;
+   margin-bottom: 30px
+ }*/
+ .cardData{
+   /*margin-left: 15%;*/
+   text-align: center;
+ }
+
+@media screen and (max-width: 990px) {
+  .cardData{
+    margin-left: 15%;
+    text-align: center;
+  }
+  .text-1{
+    margin-left: 15%;
+  }
+  .text-2{
+    color:#00FFFF;
+    margin-left: 60%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cardData{
+    margin-left:30%;
+    text-align: center;
+  }
+  .text-1{
+    margin-left:30%;
+  }
+}
+@media screen and (max-width: 467px) {
+  .cardData{
+    margin-left:15%;
+    text-align: center;
+  }
+  .text-1{
+  margin-left:15%;
+  }
+}
+.relatedCard{
+  width:100%;
+  height:100%;
+}
+a {
+    cursor: pointer;
+}
