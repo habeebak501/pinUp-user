@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <nav class="navbar navbar">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -7,12 +8,12 @@
       <li class="active"><h3 style="color:#00FFFF">PinUp</h3></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="/register" style="color:#00FFFF"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-      <li><a routerLink="/logIn" style="color:#00FFFF"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li *ngIf='isenable==true'><a routerLink="/register" style="color:#00FFFF"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+      <li *ngIf='isenable==true'><a routerLink="/logIn" style="color:#00FFFF"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li  *ngIf='isenable==false'><a (click)="onLogOut()" style="color:#00FFFF" class="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
-<div class="container">
   <div id="custom-search-input">
     <div class="input-group col-md-12">
       <input type="text" class="  search-query form-control" placeholder="Search" />
@@ -24,62 +25,41 @@
     </div>
 </div>
 </div>
-<!--
-<span class="text-1">Recently added</span>
-<div class="col-sm-12"><hr></div> -->
-<!-- <div class="cardData">
-<div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group">
-<div class="card">
- </div>
- </div>
-     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group ">
-       <div class="card">
- </div>
-     </div>
-     <div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group">
-       <div class="card">
-   </div>
-     </div>
-     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group">
-       <div class="card">
-       </div>
-     </div>
-   </div> -->
-  <a (click)="viewAll()"><span class="text-2">ViewAll</span></a>
-  <a (click)="clearAll()"><span class="text-2">Back</span></a>
-   <div class="relatedCard" *ngIf="edited==true">
-    <span class="text-1">Related</span>
-     <!-- <div class="col-sm-12"><hr></div> -->
-    <div class="cardData">
-    <div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group" *ngFor="let item of pagedItems">
-    <div class="card" >
-      <a><p>{{item.name}}</p></a>
-     </div>
-     </div>
-</div>
-<hr>
-<!-- <ul class="pagination">
-               <li [ngClass]="{disabled:pager.currentPage === 1}">
-                   <a (click)="setPage(pager.currentPage - 1)">Previous</a>
-               </li>
-               <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
-                   <a (click)="setPage(page)">{{page}}</a>
-               </li>
-               <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                   <a (click)="setPage(pager.currentPage + 1)">Next</a>
-               </li>
-            </ul> -->
-           <hr>
-         </div>
-         <div class="relatedCard" *ngIf="edited==false">
-          <span class="text-1">Related</span>
-           <!-- <div class="col-sm-12"><hr></div> -->
-          <div class="cardData">
-          <div class=" col-lg-3 col-md-3 col-sm-6 col-xs-12 form-group" *ngFor="let item of allItems">
-          <div class="card" >
-            <p>{{item.name}}</p>
-           </div>
-           </div>
+<div class="container-fluid1">
+  <span class="recent">Recent</span>
+  <hr>
+  <div class="col-md-3 col-sm-6 col-lg-3 col-xs-12" *ngFor="let data of pinupData">
+    <div class="check hideOverflow">
+      <div class="row">
+        <div class="col-sm-4  col-xs-4">
+          <img src="app/images/identicon.png" class="github-prof-image" alt="" />
+        </div>
+        <div class="col-sm-8 col-xs-8">
+          <div class="Angular2" data-toggle="tooltip" title={{data.title}}>{{data.title }}</div>
+          <span class="Desc">New framework has major changes</span><br>
+          <!-- <span class="date">{{info.createdAt | date}}</span><br> -->
+          <a class="web"  data-toggle="tooltip" title={{data.pinupUrl}} (click)="linkData(data)">{{data.pinupUrl}}</a>
+          <br>
+        </div>
       </div>
-      <hr>
+      <div class="description row" data-toggle="tooltip" title={{data.description}}>{{data.description}}
+      </div>
+      <div class="demo row">
+        <div class="firstchild  col-sm-3 col-xs-3">
+         <span class="glyphicon glyphicon-thumbs-up" (click)="incrementLike(data)"></span>
+            <p class="likes">{{data.like}}Likes</p>
+        </div>
+        <div class="col-sm-3 col-xs-3">
+           <span class="glyphicon glyphicon-thumbs-down" (click)="incrementUnLike(data)"></span>
+            <p class="unlike">{{data.unlike}}Unlike</p>
+        </div>
+        <div class="col-sm-3 col-xs-3">
+          <div class="views glyphicon glyphicon-eye-open" id="views">
+            <p class="eye">{{data.views}}Views</p>
+          </div>
+        </div>
+      </div>
     </div>
+</div>
+<br/>
+</div>

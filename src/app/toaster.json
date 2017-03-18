@@ -2,25 +2,25 @@
   "register": [
     {
       "type": "success",
-      "title": "success",
-      "message": "congrts"
+      "title": "Registration is Success",
+      "message": "progressing......."
     },
     {
       "type": "error",
-      "title": "error",
-      "message": "fail"
+      "title": "Registration is Failed",
+      "message": "TryAgain"
     }
   ],
   "login": [
     {
       "type": "success",
-      "title": "success",
+      "title": "Login is Success",
       "message": "congrts"
     },
     {
       "type": "error",
-      "title": "error",
-      "message": "fail"
+      "title": "Login is Failed",
+      "message": "TryAgain"
     }
   ],
   "subdomain": [

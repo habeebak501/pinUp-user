@@ -5,6 +5,7 @@
                <small [hidden]="emailAddress.valid || (emailAddress.pristine && !f.submitted)" class="text-danger">
                  Email is required and format should be <i>john@doe.com</i>.
                </small>
-             <button type="submit" class="btn btn-success btn-lg" [disabled]="!f.valid"><span class='glyphicon glyphicon-lock'></span>Login</button>
+             <button type="submit" class="btn btn-success btn-lg" [disabled]="!f.valid"><span class='glyphicon glyphicon-key'></span>Login</button>
            </form>
          </div>
+<simple-notifications [options]="options"></simple-notifications>

@@ -17,8 +17,10 @@ import {MaxPipe} from './pipes/max.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 import {NotificationsService } from 'angular2-notifications/src/notifications.service';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import { SampleToastComponent } from './sample-toast/sample-toast.component';
+// import { SampleToastComponent } from './sample-toast/sample-toast.component';
 import {toasterJsonService} from 'app/services/toasterJson.service';
+import { CardDataComponent } from './card-data/card-data.component';
+import { DropdownDirective } from './dropdown.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,8 @@ import {toasterJsonService} from 'app/services/toasterJson.service';
     UserLoginComponent,
     UserSubDomainComponent,
      MaxPipe,
-     SampleToastComponent
+     CardDataComponent,
+     DropdownDirective
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,31 @@
+
+
+
+
+<!--
 <form>
+  <h3 style="text-align:center;">User Registration</h3><br>
+  <h4 style="color:grey;text-align:center">Set your sub-domain</h4>
+  <div class="form-group">
   <md-select placeholder="Select Technology" [(ngModel)]="name" name="Technology" flex="50" class="md-select-value" #device (change)="onChange(name)">
   <md-option *ngFor="let n of subDomainData" [value]="n">{{n}} </md-option>
  </md-select>
- <p> Selected value: {{name}} </p>
+ </div>
+</form> -->
+
+<div class="allBody">
+
+
+<form>
+  <h2 style="text-align:center">User Registration</h2><br>
+  <h3 style="color:grey;text-align:center">Select your subdomain</h3>
+  <div class="form-group">
+    <md-select  [(ngModel)]="name" name="Technology" flex="50" class="md-select-value" #device (change)="onChange(name)">
+    <md-option *ngFor="let n of subDomainData" [value]="n">{{n}} </md-option>
+   </md-select>
+  </div>
+  <p style="color:grey;text-align:center"><small>Select a subdomain you want to register for.
+e.g. tech.pinup.com or sales.pinup.com</small></p>
+  <button type="submit" class="btn4" (click)="subDomainPage()" [disabled]="!disableButton" style="color:white"><h4>Next</h4></button>
 </form>
+</div>

@@ -1,0 +1,153 @@
+
+.navbar {
+  /*color: 	#00CED1;*/
+  text-transform: full-width;
+  font-family: Helvetica, Arial, sans-serif;
+font-size: 14px;
+}
+h4{
+  padding:20px;
+}
+
+.setting {
+  cursor: pointer;
+}
+ul.dropdown-menu {
+  position: absolute;
+      border: 1px solid #C3D1EC;
+      box-shadow: 0 1px 5px #CCCCCC;
+      white-space: wrap;
+      margin-top: 5%;
+      text-align: center;
+
+}
+.dropdown{
+  margin-top: 5%;
+  color:#1ABAD2;
+}
+p{
+  color:#1ABAD2;
+}
+/*.newWindow{
+  margin-left:-80%;
+}
+p{
+margin-left:-120%;
+}*/
+#menus:hover{
+  color: 	#00CED1;
+}
+input#name {
+  border: 0;
+  outline: 0;
+  background: none;
+  /*border-bottom: 1px solid black;*/
+  text-align:center;;
+  box-decoration-break:0px;
+  font-family: LucidaGrande-Bold;
+
+}
+.sidebar {
+  border-right: 2px solid black;
+height:600px;
+position: relative;
+
+}
+
+.cName {
+  text-align: center;
+color: #010101;
+font-family: LucidaGrande;
+font-size: 16px;
+}
+
+.Home {
+text-align: center;
+color: #010101;
+font-family: LucidaGrande-Bold;
+/*font-size: 16px;*/
+
+}
+hr {
+    border: none;
+    height: 1px;
+    /*color: #333; */
+    background-color: #333;
+}
+
+/*form {
+    margin-left: 30px;
+}*/
+/*.navbar-left{
+margin-left:20%;
+}*/
+
+.navbar-nav > li{
+  padding-left:20px;
+  padding-right:20px;
+  margin-top: 10px;
+}
+.newWindow{
+  /*margin-top:5px;*/
+}
+.rectangle-1{
+  width: 61px;
+height: 32px;
+border-radius: 8px;
+opacity: 1;
+border: solid 2px #3CAC2B;
+color: #3CAC2B;
+padding-left: 5px;
+}
+.rectangle-2{
+  width: 61px;
+height: 32px;
+border-radius: 8px;
+opacity: 1;
+border: solid 2px #D00808;
+color:#D00808;
+padding-left: 5px;
+}
+.rectangle-3{
+  width: 61px;
+height: 32px;
+border-radius: 8px;
+opacity: 1;
+border: solid 2px #1ABAD2;
+color:#1ABAD2;
+padding-left: 5px;
+}
+.navbar-left {
+        margin:0;
+        margin-top:1%;
+        margin-bottom:5%;
+        padding: 0;
+        padding-left:10%;
+        width:40%;
+    }
+.glyphicon-thumbs-up{
+  margin-left: 10%;
+  margin-top:10%;
+  color:#3CAC2B;
+}
+.glyphicon-thumbs-down{
+  margin-left: 10%;
+  margin-top:10%;
+  color:#D00808;
+}
+.glyphicon-eye-open{
+  margin-left: 10%;
+  margin-top:10%;
+    color: #1ABAD2;
+}
+.glyphicon-new-window{
+  color: #1ABAD2;
+}
+.loaderPinup{
+  margin-top:-30%;
+  margin-left: 30%;
+}
+iframe{
+  float:left;
+  margin-left: 0%;
+}

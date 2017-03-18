@@ -28,25 +28,26 @@ this.getToast.getToasterJson().subscribe((data)=>{
          });
   }
   public options = {
-  timeOut: 5000,
+  timeOut: 1000,
   lastOnBottom: true
 };
 onRegister(body,valid){
   console.log("calling",body)
   this.auth.userRegistration(body).subscribe((data)=>{
     let topic=data.json();
+    console.log(topic)
     console.log(topic.success)
     if(topic.success){
-  this._service.success(this.toasterData[0].title,this.toasterData[0].message)
-    this.router.navigate(["subDomain"]);
+      this._service.success(this.toasterData[0].title,this.toasterData[0].message);
+        localStorage.setItem('userEmail', JSON.stringify(body.emailAddress));
+      setTimeout(() => {
+         this.router.navigate(['/subDomain']);
+    }, 2000);
   }
   else
   {
     this._service.error(this.toasterData[1].title,this.toasterData[1].message)
   }
-  },
-  error=>{
-
   })
   //  this.router.navigate(["SubDomain"]);
 }

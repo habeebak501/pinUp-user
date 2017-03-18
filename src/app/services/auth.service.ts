@@ -18,17 +18,17 @@ export class AuthLoginCheck{
        return Promise.resolve();
      }
      else {
-       this.router.navigate(['/Register']);
+       this.router.navigate(['/home']);
      }
    }
  skipIfLoggedIn(): void{
       if(this.isAuthenticated())
       {
-          this.router.navigate(['/SubDomain']);
+          this.router.navigate(['/home']);
         }
       else
       {
-           this.router.navigate(['/LogIn']);
+           this.router.navigate(['/home']);
       }
 
   }
